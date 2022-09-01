@@ -58,6 +58,8 @@ class DesktopBody extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: 6,
                       itemBuilder: ((context, index) {
+                        final imageLocation =
+                            'assets/courses/udemy/00${index + 1}.png';
                         return Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -68,8 +70,15 @@ class DesktopBody extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: AspectRatio(
-                                      aspectRatio: 1, // for square
-                                      child: Icon(Icons.add_home_outlined)),
+                                    aspectRatio: 1, // for square
+                                    // child: Icon(Icons.add_home_outlined),
+                                    child: Image(
+                                      image: AssetImage(
+                                        imageLocation,
+                                      ),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ),
                                 Expanded(
                                   child: Padding(
