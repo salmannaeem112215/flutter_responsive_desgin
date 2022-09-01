@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import './dimension.dart';
+import 'package:flutter/material.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   final mobileLayout;
